@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Sistema Cadastro de Funcionarios</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Sistema Cadastro de Funcionarios</h1>
+		<hr>
+		<h2>Salvar Funcinário</h2>
+		
+		<form action="#" th:action="@{/salvarFuncionario}" th:object="${funcionarioObjForm}" method="POST">
+			<input type="text" th:field = "*{nome}"
+			 placeholder="Insira o nome do funcinário" class="form-control mb-4 col-4">
+			 
+			 <input type="text" th:field = "*{sobreNome}" 
+			 placeholder="Insira o sobre nome do funcionário" class="form-control mb-4 col-4">
+			 
+			 <input type="text" th:field = "*{email}"
+			 placeholder="Insira o email do funcinoário" class="form-control mb-4 col-4">		
+			 
+			 <button type="submit" class="btn btn-info col-2">Salvar Funcionário</button>	
+		</form>
+		
+		<hr>
+		
+		<a th:href="@{/}"> Voltar para lista de funcionários</a>
+	</div>
+
+
+</body>
+</html>
